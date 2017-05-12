@@ -379,7 +379,7 @@ public class FinanceJ extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    //private javax.swing.JButton AccountButton;  <---------------- !!!!!
+    private javax.swing.JButton AccountButton;
     private javax.swing.JTable AccountTotalTable;
     private javax.swing.JButton CategoriesButton;
     private javax.swing.JButton ExitButton;
