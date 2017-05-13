@@ -8,7 +8,30 @@
     <packaging>jar</packaging>
 
     <name>FinanceJ</name>
-    <url>http://maven.apache.org</url>
+
+    <description>FinanceJ is a personal finance Java application. A simple
+    interface allows the user to track income/expenses vs budget. No
+    accounting
+    experience required.
+    </description>
+    <organization>
+        <name>ÉTS - LOG240 - Team 04</name>
+        <url>http://www.etsmtl.ca</url>
+    </organization>
+    <developers>
+        <developer>
+            <name>Tahar Kerdali</name>
+        </developer>
+        <developer>
+            <name>Youssef Nom2</name>
+        </developer>
+        <developer>
+        <name>Prenom3 Nom3</name>
+        </developer>
+        <developer>
+            <name>Prenom4 Nom4</name>
+        </developer>
+    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,6 +45,7 @@
             <version>10.11.1.1</version>
         </dependency>
     </dependencies>
+
     <build>
         <plugins> <!-- exec plugin to run java application through maven -->
             <plugin>
@@ -39,6 +63,32 @@
                     <mainClass>ca.etsmtl.log240.financej.FinanceJ</mainClass>
                 </configuration>
             </plugin>
+
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.4</version>
+            <configuration>
+                <reportPlugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-project-info-reports-plugin</artifactId>
+                        <version>2.7</version> <reports> <report>index</report>
+                        <report>dependencies</report>
+                        <report>dependency-convergence</report>
+                        <report>plugin-management</report>
+                        <report>project-team</report>
+                        <report>plugins</report>
+                        <report>summary</report>
+                    </reports> </plugin> <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.9.1</version>
+                </plugin>
+                </reportPlugins>
+            </configuration>
+            </plugin>
+
         </plugins>
     </build>
 </project>
